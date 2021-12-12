@@ -12,5 +12,5 @@ import test.demo.Entity.Employee;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee,Long>{
-    
+   //represents a repository for employees
 }

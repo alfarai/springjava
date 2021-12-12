@@ -14,16 +14,16 @@ import javax.persistence.*;
 @Entity
 @Table(name = "tbl_employees")
 public class Employee implements Serializable{
-    
+    //this class represents the employee entity table itself in API level
     
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int employeeId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //for autoincrement of id
+    private Long employeeId;
     private String name;
     private String location;
     private String department;
     
-    public Employee(int id, String name, String location, String department){
+    public Employee(Long id, String name, String location, String department){
         this.employeeId = id;
         this.name = name;
         this.location = location;
@@ -36,14 +36,14 @@ public class Employee implements Serializable{
     /**
      * @return the Id
      */
-    public int getId() {
+    public Long getId() {
         return employeeId;
     }
 
     /**
      * @param id
      */
-    public void setId(int id) {
+    public void setId(Long id) {
         this.employeeId = id;
     }
 
